@@ -1,0 +1,39 @@
+/* Loader.css */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8); /* Optional - background overlay */
+  z-index: 9999;
+}
+
+.pl {
+  animation: rotate 2s linear infinite;
+}
+
+.pl__ring {
+  animation: dash 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 0, 257;
+  }
+  50% {
+    stroke-dasharray: 128, 257;
+  }
+  100% {
+    stroke-dasharray: 0, 257;
+  }
+}
